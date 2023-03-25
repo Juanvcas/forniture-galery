@@ -1,0 +1,112 @@
+.slider {
+	width: 100%;
+	height: 100%;
+}
+
+.slider-cont {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.slider_sld {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.active-sld {
+	opacity: 1;
+}
+
+.sld_text {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 50%;
+	height: 100%;
+	padding: 6rem;
+	color: #fff;
+	z-index: 1;
+}
+
+.sld_text h1 {
+	font-size: 6.4rem;
+}
+
+.sld_text p {
+	font-size: 2.4rem;
+	font-style: italic;
+}
+
+.slider_sld img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center;
+	filter: brightness(0.8);
+	z-index: 0;
+}
+
+.slider_btn-prev,
+.slider_btn-next {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 4rem;
+	height: 4rem;
+	border: none;
+	color: #fff;
+	background: none;
+	cursor: pointer;
+	z-index: 5;
+}
+
+.slider_btn-prev svg,
+.slider_btn-next svg {
+	width: 100%;
+	height: 100%;
+}
+
+.slider_btn-prev svg:hover,
+.slider_btn-next svg:hover {
+	color: #fffa;
+}
+
+.slider_btn-prev {
+	left: 2rem;
+}
+
+.slider_btn-next {
+	right: 2rem;
+}
+
+.slider_dots {
+	position: absolute;
+	bottom: 2rem;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	padding: 0;
+	list-style: none;
+}
+
+.dot {
+	margin: 0 0.5rem;
+	width: 1rem;
+	height: 1rem;
+	border-radius: 50%;
+	background: #0005;
+	cursor: pointer;
+	transition: background 0.5s ease-in-out;
+}
+
+.dot-active {
+	background: #fffa;
+}
