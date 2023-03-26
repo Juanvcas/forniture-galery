@@ -8,14 +8,16 @@ import './styles/index.css';
 const router = createBrowserRouter([
 	{
 		path: '/',
-		element: <Home />,
+		element: (
+			<MainLayout>
+				<Home />
+			</MainLayout>
+		),
 	},
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 	<React.StrictMode>
-		<MainLayout>
-			<RouterProvider router={router} />
-		</MainLayout>
+		<RouterProvider router={router} />
 	</React.StrictMode>
 );

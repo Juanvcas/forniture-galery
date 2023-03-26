@@ -40,21 +40,25 @@ export const Slider = ({ slides }) => {
 						<img src={sld.src} alt={sld.alt} />
 					</div>
 				))}
-				<button className='slider_btn-prev' onClick={prevSlide}>
-					<MdArrowBackIos />
-				</button>
-				<button className='slider_btn-next' onClick={nextSlide}>
-					<MdArrowForwardIos />
-				</button>
-				<ul className='slider_dots'>
-					{slides.map((sld, index) => (
-						<li
-							key={index}
-							className={index === currentSlide ? 'dot dot-active' : 'dot'}
-							onClick={() => setCurrentSlide(index)}
-						></li>
-					))}
-				</ul>
+				{slides.length > 1 ? (
+					<>
+						<button className='slider_btn-prev' onClick={prevSlide}>
+							<MdArrowBackIos />
+						</button>
+						<button className='slider_btn-next' onClick={nextSlide}>
+							<MdArrowForwardIos />
+						</button>
+						<ul className='slider_dots'>
+							{slides.map((sld, index) => (
+								<li
+									key={index}
+									className={index === currentSlide ? 'dot dot-active' : 'dot'}
+									onClick={() => setCurrentSlide(index)}
+								></li>
+							))}
+						</ul>
+					</>
+				) : null}
 			</div>
 		</div>
 	);

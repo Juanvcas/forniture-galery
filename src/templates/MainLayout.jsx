@@ -1,3 +1,4 @@
+import { Footer } from '../components/global/Footer';
 import { Header } from '../components/global/Header';
 
 export const MainLayout = ({ children }) => {
@@ -5,6 +6,7 @@ export const MainLayout = ({ children }) => {
 		<>
 			<Header />
 			{children}
+			<Footer />
 		</>
 	);
 };

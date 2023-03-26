@@ -1,5 +1,5 @@
 .main_banner {
-	height: 50rem;
+	height: 60rem;
 }
 
 .banner-cont {
@@ -90,4 +90,10 @@
 .catalog_banner a:hover {
 	background-color: #0005;
 	transition: 0.3s ease-in-out;
+}
+
+.projects-cont {
+	width: 100%;
+	height: 40rem;
+	margin-top: 2rem;
 }

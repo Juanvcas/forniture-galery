@@ -20,6 +20,20 @@ const bannerSlides = [
 	},
 ];
 
+const projectsSlides = [
+	{
+		title: <h2>Call Center</h2>,
+		text: (
+			<p>
+				Espacio de trabajo completamente amueblada con islas de escritorios,
+				oficinas y sala de estar y juntas.
+			</p>
+		),
+		src: 'https://i.postimg.cc/PJJ4FrLQ/Puestos_de_trabajo.jpg',
+		alt: 'Imagen de isla de trabajo tipo call center',
+	},
+];
+
 export default function Home() {
 	return (
 		<>
@@ -71,7 +85,12 @@ export default function Home() {
 				<section className='main_catalog content-limit'>
 					<div className='catalog_banner'>
 						<h2>Catálogo de productos</h2>
-						<Link to={'/contacts'}>Ir al catálogo</Link>
+						{/* <Link to={'/contacts'}>Ir al catálogo</Link> */}
+					</div>
+				</section>
+				<section className='main_projects content-limit'>
+					<div className='projects-cont'>
+						<Slider slides={projectsSlides} />
 					</div>
 				</section>
 			</main>
